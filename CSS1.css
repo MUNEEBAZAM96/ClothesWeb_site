@@ -1,0 +1,246 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan',sans-serif;
+}
+
+h1{
+    font-size: 50px;
+    line-height: 54px;
+    color:black;
+
+}
+h2{
+    font-size:46px;
+    line-height: 54px;
+    color:#222;
+
+}
+
+h4{
+    font-size: 20px;
+    color: #222;
+
+}
+h6{
+    font-weight: 700;
+    font-size: 12px;
+
+}
+
+p{
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+}
+
+.section-p1{
+    padding: 40px 80px;
+}
+.section-m1{
+    margin: 40px 0;
+}
+
+body{
+    width: 100%;
+}
+.logo{
+    width: 50px;
+    height: 50px;
+    margin-top: 5px;
+    margin-left: 10px;
+    background-color:  antiquewhite;;
+
+}
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:20px 80px;
+    background-color: antiquewhite;
+    box-shadow: 0 5px 15px rgb(0, 0, 0.06); 
+}
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+    text-align: center;
+}
+
+#navbar li{
+    list-style:none ;
+    padding: 0 20px;
+    word-spacing: 2px;
+    position:relative;
+}
+#navbar li a{
+    text-decoration: none;
+    font-size:16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition:0.3s ease;
+
+}
+
+#navbar li a:hover,
+#navbar li a.active{
+    color: orange;
+    cursor: pointer;
+
+}
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: "";
+    width:30%;
+    height:2px;
+    background:blue ;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+
+
+}
+
+/* Home Page */
+#hero{
+    background-image: url("MS.jpg");
+    height: 90vh;
+    width:100%;
+    background-size:cover ;
+    background-position: top 25% right 0%;
+    padding : 0 80px;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+#hero h2{
+    padding-bottom: 15px;
+    color: black;
+}
+#hero h1{
+    color:black;
+}
+#hero button{
+    
+}
+#feature .fe-box{
+    width:180px ;
+    text-align: center;
+    padding: 25px;
+    box-shadow: 20px 20px , 34px , rgba(0, 0, 0, 0.03);
+    border:1px solid rgb(243, 243, 243);
+    height: 20px;
+
+}
+#product1{
+    text-align: center;
+
+}
+#product1 .pro{
+    width: 23%;
+    min-width: 250px;
+    padding:10px , 12px ;
+    border: 1px solid rgb(244, 236, 236);
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
+    margin: 15px 0;
+    transition: 0.2s ease ;
+}
+#product1 .pro img{
+    width: 100%;
+    border-radius:20px;
+
+}
+#product1 .pro .des{
+    text-align: start;
+    padding: 10px 0;
+}
+#product1 .pro .des span{
+    color: #606063;
+    font-size:12px;
+
+}
+#product1 .pro .des h5{
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+#product1 .pro .des i{
+    font-size: 12px;
+    color: rgba(243,181,25);
+
+}
+#product1 .pro .des h4{
+    padding-top:7px ;
+    font-size: 15px;
+    font-weight: 700;
+    color: #088178;
+
+}
+#product1 .pro .cart{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: #e8f6ea;
+    font-weight:500;
+
+} 
+#product1 .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap:wrap ;
+
+}
+#banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image:url("ban.jpg") ;
+    width: 100%;
+    height: 50vh;
+    background-position: center ;
+    background-size: cover;
+}
+
+#banner h4{
+    color: white;
+    font-size:16px ;
+}
+#banner h2{
+    color: rgb(136, 32, 32);
+    font-size: 50px;
+    padding: 10px 0;
+
+
+}
+#banner h2 span{
+    color: rgb(251, 251, 251);
+    font-size: 50px;
+    padding: 10px 0;
+    
+
+}
+button.normal{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: #000;
+    background-color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s ease;
+
+}
+button.normal:hover{
+    background-color: antiquewhite;
+    opacity: 0.8;
+}
