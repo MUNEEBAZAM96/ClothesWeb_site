@@ -317,3 +317,36 @@ button.normal:hover {
     0% { transform: translateX(-100%); }
     100% { transform: translateX(0); }
 }
+/* Products */
+#product1 {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap into the next row */
+    justify-content: space-between; /* Add space between items */
+    padding: 20px; /* Optional: Add padding around the product section */
+}
+
+#product1 .pro {
+    width: calc(25% - 15px); /* Adjust width to fit 4 items per row with spacing */
+    padding: 10px 12px;
+    border: 1px solid #f4ecec;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 10px; /* Add margin between items */
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+#product1 .pro:hover {
+    transform: translateY(-5px);
+}
+@media (max-width: 768px) {
+    #product1 .pro {
+        width: calc(50% - 15px); /* 2 items per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #product1 .pro {
+        width: 100%; /* 1 item per row on very small screens */
+    }
+}
