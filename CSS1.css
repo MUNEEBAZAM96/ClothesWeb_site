@@ -1,233 +1,275 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Spartan',sans-serif;
+    font-family: 'Spartan', sans-serif;
 }
 
-h1{
+body {
+    width: 100%;
+    scroll-behavior: smooth;
+    background-color: #f5f5f5;
+    color: #222;
+}
+
+/* Headers and Text */
+h1 {
     font-size: 50px;
     line-height: 54px;
-    color:black;
-
+    color: #333;
+    animation: fadeInDown 1s ease-in-out;
 }
-h2{
-    font-size:46px;
+
+h2 {
+    font-size: 46px;
     line-height: 54px;
-    color:#222;
-
+    color: #444;
+    animation: fadeIn 1.2s ease-in-out;
 }
 
-h4{
+h4 {
     font-size: 20px;
-    color: #222;
-
+    color: #666;
+    animation: fadeInUp 1.2s ease-in-out;
 }
-h6{
+
+h6 {
     font-weight: 700;
     font-size: 12px;
-
+    animation: fadeIn 1.5s ease-in-out;
 }
 
-p{
+p {
     font-size: 16px;
     color: #465b52;
     margin: 15px 0 20px 0;
+    animation: fadeIn 1.2s ease-in-out;
 }
 
-.section-p1{
-    padding: 40px 80px;
+/* Section Padding and Margin */
+.section-p1 {
+    padding: 60px 80px;
+    background-color: #fff;
 }
-.section-m1{
+
+.section-m1 {
     margin: 40px 0;
 }
 
-body{
-    width: 100%;
-}
-.logo{
-    width: 50px;
-    height: 50px;
-    margin-top: 5px;
-    margin-left: 10px;
-    background-color:  antiquewhite;;
-
-}
-#header{
+/* Header Section */
+#header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding:20px 80px;
+    padding: 20px 80px;
     background-color: antiquewhite;
-    box-shadow: 0 5px 15px rgb(0, 0, 0.06); 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeInDown 1s ease-in-out;
 }
-#navbar{
+
+.logo {
+    width: 50px;
+    height: 50px;
+    background-color: antiquewhite;
+    margin-top: 5px;
+    margin-left: 10px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Navbar */
+#navbar {
     display: flex;
     align-items: center;
-    justify-content:center ;
+    justify-content: center;
     text-align: center;
 }
 
-#navbar li{
-    list-style:none ;
+#navbar li {
+    list-style: none;
     padding: 0 20px;
-    word-spacing: 2px;
-    position:relative;
+    position: relative;
 }
-#navbar li a{
+
+#navbar li a {
     text-decoration: none;
-    font-size:16px;
+    font-size: 16px;
     font-weight: 600;
     color: #1a1a1a;
-    transition:0.3s ease;
-
+    transition: color 0.3s ease;
 }
 
 #navbar li a:hover,
-#navbar li a.active{
+#navbar li a.active {
     color: orange;
     cursor: pointer;
-
 }
+
 #navbar li a.active::after,
-#navbar li a:hover::after{
+#navbar li a:hover::after {
     content: "";
-    width:30%;
-    height:2px;
-    background:blue ;
+    width: 30%;
+    height: 2px;
+    background: blue;
     position: absolute;
     bottom: -4px;
-    left: 20px;
-
-
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
 }
 
 /* Home Page */
-#hero{
+#hero {
     background-image: url("MS.jpg");
     height: 90vh;
-    width:100%;
-    background-size:cover ;
+    width: 100%;
+    background-size: cover;
     background-position: top 25% right 0%;
-    padding : 0 80px;
-    display:flex;
+    padding: 0 80px;
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    animation: slideIn 1s ease-in-out;
 }
-#hero h2{
+
+#hero h2 {
     padding-bottom: 15px;
     color: black;
+    animation: fadeInUp 1s ease-in-out;
 }
-#hero h1{
-    color:black;
+
+#hero h1 {
+    color: black;
+    animation: fadeInLeft 1.2s ease-in-out;
 }
-#hero button{
-    
+
+#hero button {
+    padding: 12px 25px;
+    border: none;
+    background-color: orange;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
-#feature .fe-box{
-    width:180px ;
+
+#hero button:hover {
+    background-color: darkorange;
+    transform: scale(1.1);
+}
+
+/* Feature Box */
+#feature .fe-box {
+    width: 180px;
     text-align: center;
     padding: 25px;
-    box-shadow: 20px 20px , 34px , rgba(0, 0, 0, 0.03);
-    border:1px solid rgb(243, 243, 243);
-    height: 20px;
-
+    box-shadow: 0px 20px 34px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f3f3f3;
+    transition: transform 0.3s ease;
 }
-#product1{
-    text-align: center;
 
+#feature .fe-box:hover {
+    transform: scale(1.05);
 }
-#product1 .pro{
+
+/* Products */
+#product1 .pro {
     width: 23%;
     min-width: 250px;
-    padding:10px , 12px ;
-    border: 1px solid rgb(244, 236, 236);
+    padding: 10px 12px;
+    border: 1px solid #f4ecec;
     border-radius: 25px;
     cursor: pointer;
-    box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.05);
     margin: 15px 0;
-    transition: 0.2s ease ;
+    transition: transform 0.3s ease;
 }
-#product1 .pro img{
-    width: 100%;
-    border-radius:20px;
 
+#product1 .pro:hover {
+    transform: translateY(-5px);
 }
-#product1 .pro .des{
+
+#product1 .pro img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+#product1 .pro .des {
     text-align: start;
     padding: 10px 0;
+    animation: fadeIn 1.2s ease-in-out;
 }
-#product1 .pro .des span{
-    color: #606063;
-    font-size:12px;
 
+#product1 .pro .des span {
+    color: #606063;
+    font-size: 12px;
 }
-#product1 .pro .des h5{
+
+#product1 .pro .des h5 {
     padding-top: 7px;
     color: #1a1a1a;
     font-size: 14px;
 }
-#product1 .pro .des i{
-    font-size: 12px;
-    color: rgba(243,181,25);
 
-}
-#product1 .pro .des h4{
-    padding-top:7px ;
+#product1 .pro .des h4 {
+    padding-top: 7px;
     font-size: 15px;
     font-weight: 700;
     color: #088178;
-
 }
-#product1 .pro .cart{
+
+#product1 .pro .cart {
     width: 40px;
     height: 40px;
     line-height: 40px;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: #e8f6ea;
-    font-weight:500;
-
-} 
-#product1 .pro-container{
-    display: flex;
-    justify-content: space-between;
-    padding-top: 20px;
-    flex-wrap:wrap ;
-
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
-#banner{
+
+#product1 .pro .cart:hover {
+    background-color: #c8f2ce;
+    transform: scale(1.1);
+}
+
+/* Banner */
+#banner {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-image:url("ban.jpg") ;
+    background-image: url("ban.jpg");
     width: 100%;
     height: 50vh;
-    background-position: center ;
+    background-position: center;
     background-size: cover;
+    animation: zoomIn 1s ease-in-out;
 }
 
-#banner h4{
+#banner h4 {
     color: white;
-    font-size:16px ;
+    font-size: 16px;
+    animation: fadeInUp 1.2s ease-in-out;
 }
-#banner h2{
-    color: rgb(136, 32, 32);
+
+#banner h2 {
+    color: #882020;
     font-size: 50px;
     padding: 10px 0;
-
-
+    animation: fadeIn 1.4s ease-in-out;
 }
-#banner h2 span{
-    color: rgb(251, 251, 251);
+
+#banner h2 span {
+    color: #fbfbfb;
     font-size: 50px;
-    padding: 10px 0;
-    
-
 }
-button.normal{
+
+/* Button */
+button.normal {
     font-size: 14px;
     font-weight: 600;
     padding: 15px 30px;
@@ -237,10 +279,41 @@ button.normal{
     cursor: pointer;
     border: none;
     outline: none;
-    transition: 0.2s ease;
-
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
-button.normal:hover{
+
+button.normal:hover {
     background-color: antiquewhite;
-    opacity: 0.8;
+    transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+    0% { opacity: 0; transform: translateX(-20px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes zoomIn {
+    0% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
+
+@keyframes slideIn {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
 }
